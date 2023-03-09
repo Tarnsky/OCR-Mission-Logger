@@ -2,17 +2,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-
     <data>
-
     </data>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
-
-
         <ImageView
             android:id="@+id/image_view"
             android:layout_width="match_parent"
@@ -20,9 +15,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent">
-
         </ImageView>
-
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -30,17 +23,12 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/btn_layout">
-
             <TextView
                 android:id="@+id/text_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
-
             </TextView>
-
         </ScrollView>
-
         <LinearLayout
             android:id="@+id/btn_layout"
             android:layout_width="match_parent"
@@ -49,28 +37,30 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             android:gravity="center">
-
             <Button
                 android:id="@+id/capture_image"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="25dp"
-                android:text="CAPTURE">
-
+                android:layout_weight="1"
+                android:text="CAPTURE"
+                android:layout_margin="8dp">
             </Button>
-
             <Button
                 android:id="@+id/detect_text_image_btn"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="25dp"
-                android:text="DETECT">
-
+                android:layout_weight="1"
+                android:text="DETECT"
+                android:layout_margin="8dp">
             </Button>
-
-
+            <Button
+                android:id="@+id/button_copy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Copy Text"
+                android:layout_margin="8dp">
+            </Button>
         </LinearLayout>
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
